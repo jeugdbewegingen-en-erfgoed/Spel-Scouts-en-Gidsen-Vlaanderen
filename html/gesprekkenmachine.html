@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl" id="exe-page-mpazd8n4-2jhkfxeth">
+<head>
+<meta charset="utf-8">
+<meta name="generator" content="eXeLearning v4.0.5">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="license" type="text/html" href="https://creativecommons.org/licenses/by-sa/4.0/">
+<title>Gesprekkenmachine | Jeugdbewegingen en erfgoed - Scouts en Gidsen Vlaanderen</title>
+<link rel="icon" type="image/x-icon" href="../libs/favicon.ico">
+<script>document.querySelector("html").classList.add("js");</script><script src="../libs/jquery/jquery.min.js"> </script><script src="../libs/common_i18n.js"> </script><script src="../libs/common.js"> </script><script src="../libs/exe_export.js"> </script><script src="../libs/bootstrap/bootstrap.bundle.min.js"> </script><link rel="stylesheet" href="../libs/bootstrap/bootstrap.min.css">
+<script src="../idevices/text/text.js"></script><link rel="stylesheet" href="../idevices/text/text.css">
+<link rel="stylesheet" href="../content/css/base.css"><script src="../theme/style.js"> </script><link rel="stylesheet" href="../theme/style.css">
+</head>
+<body class="exe-export exe-web-site">
+<script>document.body.className+=" js"</script>
+<div class="exe-content exe-export pre-js siteNav-hidden"><a href="#page-mpazd8n4-2jhkfxeth" id="skipNav">Skip to content</a> <nav id="siteNav">
+<ul>
+<li> <a href="../index.html" class="main-node no-ch">Startpagina</a>
+</li>
+<li> <a href="../html/spelbord.html" class="no-ch">Spelbord</a>
+</li>
+<li> <a href="../html/erf-goed-of-erf-slecht.html" class="no-ch">Erf-goed of erf-slecht?</a>
+</li>
+<li> <a href="../html/spelletjesmachine.html" class="no-ch">Spelletjesmachine</a>
+</li>
+<li> <a href="../html/quiz.html" class="no-ch">Quiz</a>
+</li>
+<li> <a href="../html/weetjes.html" class="no-ch">Weetjes</a>
+</li>
+<li class="active"> <a href="../html/gesprekkenmachine.html" class="active no-ch">Gesprekkenmachine</a>
+</li>
+</ul>
+</nav><main id="page-mpazd8n4-2jhkfxeth" class="page"> 
+<header class="main-header">
+<div class="package-header"><p class="package-title">Jeugdbewegingen en erfgoed - Scouts en Gidsen Vlaanderen</p></div>
+<div class="page-header"><h1 class="page-title">Gesprekkenmachine</h1></div>
+</header><div id="page-content-page-mpazd8n4-2jhkfxeth" class="page-content">
+<article id="block-1776087793249-vmcr3xyzc" class="box">
+<header class="box-head">
+<div class="box-icon exe-icon">
+<img src="../theme/icons/letters.svg" alt="" style="display:block;object-fit:contain;">
+</div>
+<h1 class="box-title">Draai en vertel!</h1>
+<button class="box-toggle box-toggle-on" title="Toggle content">
+<span>Toggle content</span>
+</button></header>
+<div class="box-content">
+<div id="idevice-1776087793249-tt4hw32hi" class="idevice_node text" data-idevice-path="../idevices/text/" data-idevice-type="text" data-idevice-component-type="json" data-idevice-json-data="{&quot;ideviceId&quot;:&quot;idevice-1776087793249-tt4hw32hi&quot;}">
+<div class="exe-text-template">
+    <p><strong>Ga rustig bij elkaar zitten binnen of buiten aan een kampvuur. Neem iets lekkers om te drinken en geniet van de gesprekken. Druk op de knop en laat het rad jullie vraag bepalen!</strong></p>
+<p><canvas id="rad" width="400" height="400"></canvas></p>
+<p><button onclick="draaiRad()" style="padding: 10px 20px; font-size: 16px;">Draai het rad!</button></p>
+<p id="reflectie" style="font-weight: bold; margin-top: 15px;"></p>
+<p>
+<script>
+// Woorden op het rad
+var woorden = [
+  "Muziek",
+  "Kampgrappen",
+  "Tradities",
+  "Nachtspel",
+  "Geuren",
+  "Activiteiten",
+  "Jubileum",
+  "Herinnering",
+  "Kasactie",
+  "Bijnamen",
+  "Feestjes",
+  "Startdag",
+  "Kampthema",
+  "Kamp/Weekend",
+  "Kampkost",
+"Corona",
+"Hygiëne",
+"Ecologie"
+];
+
+// Lange reflectieteksten gekoppeld aan elk woord
+var reflecties = {
+  "Muziek": "Muziek speelt een belangrijke rol in een jeugdbeweging: zingen, liedjes componeren, dansen, gitaarspelen bij het kampvuur, een festival op poten zetten, enzovoort. Wie van jullie komt uit de meest muzikale groep?",
+  "Kampgrappen": "We gaan op kamp! In de zomervakantie trekt bijna elke jeugdbeweging eropuit, in een grote of een kleine groep. Een ideaal moment om hilarische grappen uit te halen. Wie haalde ooit een grap uit op kamp?",
+  "Tradities": "Rituelen en tradities zijn vaak aanwezig in een jeugdbeweging. Ze verbinden leden van een groep tot een hechte gemeenschap, en tegelijk zorgen ze voor verscheidenheid. Lokale groepen geven er immers hun eigen betekenis en vorm aan. Heeft jullie groep rituelen of tradities? Welke? Iedereen denkt één minuut na en geeft een voorbeeld.",
+  "Nachtspel": "Wie speelde ooit het meest spectaculaire nachtspel? Ontvoeringen, gemaskerde leiding, een tocht door het donkere bos, gehuil van wolven op de achtergrond: allemaal ingrediënten van een typisch nachtspel. Duik in je geheugen en vis een verhaal op over een spannend nachtspel dat je ooit meemaakte.",
+  "Geuren": "De geur van dennenhout, gebakken spek en ei, modder, zweetsokken in een legertent: geuren roepen herinneringen op aan vroeger. Welke geur roept de strafste herinneringen op? Welke geur, gelinkt aan jouw tijd in de jeugdbeweging, zal je altijd bijblijven?",
+  "Activiteiten": "Bosspelen, tochten, avontuur, sport, pleinspelen, creativiteit en expressie: welke activiteit slaat het meest aan bij jullie leden? Welke activiteit is een echte hit in jullie groep?",
+  "Jubileum": "'t Is feest! Veel groepen vieren feest naar aanleiding van de verjaardag van hun groep. Dat heet een jubileum. Wie vierde onlangs feest met zijn of haar groep? Wat stond er op het programma?",
+  "Herinnering": "Wat is je allermooiste herinnering? Als je één moment uit je carrière in de jeugdbeweging nog één keer mocht herbeleven, wat zou je dan kiezen? Iedereen denkt één minuut na en stelt hun mooiste herinnering kort voor.",
+  "Kasactie": "Veel jeugdbewegingsgroepen organiseren activiteiten om geld in het laatje te brengen. Geef een voorbeeld van een activiteit die jullie ooit organiseerden om de kas te spijzen.",
+  "Bijnamen": "Bijnamen! Elke groep heeft er wel een paar. Gaande van /de witte/ tot /den tand/. Wie kan de gekste bijnaam voorleggen? En ken je het verhaal achter die naam? Denk één minuut na en leg dan een bijnaam voor.",
+  "Feestjes": "Veel groepen organiseren feestjes en uitstapjes, bijvoorbeeld naar aanleiding van een speciaal moment zoals Halloween, Sinterklaas of Pasen.",
+  "Startdag": "Organiseert jouw groep aan het begin van een nieuw werkjaar iets speciaals? Een soort van startdag, openingsmoment of overgangsritueel? Iedereen denkt één minuut na.",
+  "Kampthema": "Asterix en Obelix, FC de Kampioenen, Welkom in het circus, De spoken van Argwania: een kamp wordt meestal opgevrolijkt door een thema, een rode draad. Ga even terug in de tijd en denk na over het beste kampthema.",
+  "Kamp/Weekend": "Gaan jullie op kamp of op weekend? In welke omstandigheden slapen en eten jullie?",
+  "Kampkost": "Ook recepten en gerechten zijn erfgoed. Waar kijken jullie op kamp ieder jaar weer naar uit om te eten? Met andere woorden: wat is de lekkerste kampkost?",
+"Corona": "13 maart 2020. De nationale lockdown gaat in! Alle fysieke activiteiten van jeugdbewegingen worden opgeschort. Veel groepen zien zich genoodzaakt om alternatieve manieren van vermaak te verzinnen. Wat deden jullie groepen om de activiteiten op een andere manier te kunnen laten doorgaan?",
+"Hygiëne": "Vroeger was het de normaalste zaak om tijdens een activiteit van één fles te drinken. Door onder andere corona zijn we ons bewust geworden van hygiëne. Hoe kijken jullie hiernaar terug? Moet dit behouden worden, of hebben jullie alternatieven?",
+"Ecologie": "De laatste jaren laten milieu en duurzaamheid zich steeds vaker en luider horen binnen de jeugdbewegingen. De groepen proberen een steentje bij te dragen om deze problematiek op te lossen. Wat zijn jullie tips om een activiteit of kamp ecologischer te maken?",
+};
+
+// Rad tekenen
+var canvas = document.getElementById("rad");
+var ctx = canvas.getContext("2d");
+var aantal = woorden.length;
+var hoek = 2 * Math.PI / aantal;
+
+function tekenRad() {
+  for (var i = 0; i < aantal; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = i % 2 === 0 ? "#ffcc66" : "#ff9966";
+    ctx.moveTo(200, 200);
+    ctx.arc(200, 200, 200, i * hoek, (i + 1) * hoek);
+    ctx.fill();
+    ctx.save();
+    ctx.translate(200, 200);
+    ctx.rotate(i * hoek + hoek / 2);
+    ctx.textAlign = "right";
+    ctx.fillStyle = "#000";
+    ctx.font = "16px Arial";
+    ctx.fillText(woorden[i], 180, 5);
+    ctx.restore();
+  }
+}
+tekenRad();
+
+// Rad draaien
+function draaiRad() {
+  var draai = Math.random() * 360 + 720; // minstens 2 rondjes
+  canvas.style.transition = "transform 3s ease-out";
+  canvas.style.transform = "rotate(" + draai + "deg)";
+
+  setTimeout(function() {
+    var eindHoek = (draai % 360) * Math.PI / 180;
+    var index = Math.floor(aantal - (eindHoek / hoek)) % aantal;
+    var woord = woorden[index];
+    document.getElementById("reflectie").innerHTML = reflecties[woord];
+  }, 3000);
+}
+</script>
+</p>
+</div>
+</div>
+</div>
+</article>
+</div></main><div class="nav-buttons">
+<a href="../html/weetjes.html" title="Previous" class="nav-button nav-button-left"><span>Previous</span></a>
+<span class="nav-button nav-button-right" aria-hidden="true"><span>Next</span></span>
+</div>
+<footer id="siteFooter"><div id="siteFooterContent"> <div id="packageLicense" class="cc cc-by-sa"> <p> <span class="license-label">License: </span><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="license">creative commons: attribution - share alike 4.0</a></p>
+</div>
+</div></footer>
+</div>
+
+</body>
+</html>
